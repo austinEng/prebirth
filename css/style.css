@@ -321,14 +321,14 @@ body {
   display: inline-block;
   color: white;
   white-space: normal;
-  line-height: 16px;
+  line-height: 20px;
 }
 .bio div {
   border-top: 1px solid white;
 }
 .first-word {
   font-size: 35px;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
 }
 .actor_pic {
   vertical-align: middle;
@@ -579,9 +579,6 @@ body {
   }
   #title {
     font-size: 60px;
-  }
-  .actor > .row > .col-sm-3 > img {
-    display: none;
   }
   #sidebar > .person_tag {
     padding-top: 5px!important;
