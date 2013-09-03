@@ -640,26 +640,6 @@ body {
     padding-bottom: 150px;
   }
 }
-@media (max-width: 1044px) {
-  .actor-left .actor_name div {
-    left: -60px;
-    font-size: 20px;
-  }
-  .actor-right .actor_name div {
-    font-size: 20px;
-    left: -90px;
-  }
-}
-@media (max-width: 740px) {
-  .actor-left .actor_name div {
-    left: -55px;
-    font-size: 15px;
-  }
-  .actor-right .actor_name div {
-    font-size: 15px;
-    left: -80px;
-  }
-}
 .col-hide {
   display: none;
 }
