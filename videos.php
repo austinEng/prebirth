@@ -9,7 +9,7 @@ if(empty($access)) {
     <div class="row" style="height:100%">
         <div class="col-sm-3" id="sidebar">
             <br><br><br>
-            <div class="vid_tag" id="A5iP_0LOWvo">
+            <div class="vid_tag active-side" id="A5iP_0LOWvo">
                 This is a title
             </div>
             <div class="vid_tag" id="XY8cB9Cc1yg">

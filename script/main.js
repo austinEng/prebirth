@@ -98,6 +98,8 @@ $(document).ready(function() {
     $('.vid_tag').click(function(){
         //$('#viewer iframe').attr('src', '//www.youtube.com/embed/'+$(this).attr('id'));
 
+        var old = $('#videos .active-side').attr('id')+'_v';
+
         var thisEl = $(document.getElementById($(this).attr('id')));
         $('.vid_tag').each(function(){
             if($(this).attr('id')!=thisEl) {$(this).addClass('active-side-whiting');}
@@ -115,8 +117,15 @@ $(document).ready(function() {
                 $(this).addClass('visi');
             } else {
                 $(this).removeClass('visi');
+                if ($(this).attr('id')==old) {
+                    var src = $(this).attr('src');
+                    $(this).attr('src','');
+                    $(this).attr('src',src);
+                }
+
             }
         });
+
     });
 
     $('.person_tag').click(function(){
