@@ -97,10 +97,15 @@ $(document).ready(function() {
 
     $('.vid_tag').click(function(){
         //$('#viewer iframe').attr('src', '//www.youtube.com/embed/'+$(this).attr('id'));
-
         var old = $('#videos .active-side').attr('id')+'_v';
-
         var thisEl = $(document.getElementById($(this).attr('id')));
+
+        if($(window).width()<=767) {
+            var link = 'http://www.youtube.com/watch?v='+thisEl.attr('id');
+            console.log(link);
+            window.location = link;
+        }
+
         $('.vid_tag').each(function(){
             if($(this).attr('id')!=thisEl) {$(this).addClass('active-side-whiting');}
         });
