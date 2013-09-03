@@ -22,7 +22,8 @@ if (isMobile()) {
 <script src="script/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
 <script src="script/packery.pkgd.min.js" type="text/javascript"></script>
 
-<meta name="viewport" content="width=device-width, user-scalable=false, initial-scale=1;" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
 
 </head>
 <body onresize="sizeElements()" unselectable="on">
