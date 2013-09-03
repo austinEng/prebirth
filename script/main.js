@@ -365,6 +365,22 @@ function sizeElements() {
     } else {
         $('#crew-title').css('font-size',(($(window).height()-50)*200/263/2));
     }
+
+    if ($('#image-viewer').hasClass('in')) {
+        var galWrapper = $('#gallery_pic_wrapper');
+        var viewerRatio = galWrapper.width()/galWrapper.height();
+        var galPic = $('#gallery_pic');
+        galPic.css('width','').css('height','');
+        var picRatio = galPic.width()/galPic.height();
+        console.log(picRatio, viewerRatio);
+        if (picRatio > viewerRatio) {
+            galPic.css('width', '100%');
+            galPic.css('height', galPic.width()/picRatio);
+        } else {
+            galPic.css('height', '100%');
+            galPic.css('width', galPic.height()*picRatio);
+        }
+    }
 }
 
 /**

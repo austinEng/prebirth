@@ -267,6 +267,9 @@ body {
   background-color: black;
   box-shadow: 0px 0px 100px 50px black;
 }
+#image-viewer {
+  overflow: hidden;
+}
 #image-viewer > .modal-dialog {
   width: 90%;
   height: 90%;
@@ -535,6 +538,14 @@ body {
 }
 #expand-button {
   display: none!important;
+}
+#image-viewer .col-sm-1 {
+  float: left;
+  width: 8.333333333333332%;
+}
+#image-viewer .col-sm-10 {
+  float: left;
+  width: 83.33333333333334%;
 }
 @media (max-width: 767px) {
   #expand-button {
