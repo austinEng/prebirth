@@ -39,6 +39,7 @@
 }
 html {
   height: 100%;
+  overflow: hidden;
 }
 body {
   font-family: codeLight;
@@ -402,7 +403,6 @@ body {
   clear: both;
   height: 500;
   position: relative;
-  display: none;
 }
 #viewer iframe {
   display: none;
@@ -660,9 +660,6 @@ body {
   #viewer-floater {
     display: none;
   }
-}
-@media (min-width: 768px) {
-  
 }
 #scrollbar2 .viewport {
   position: fixed;
