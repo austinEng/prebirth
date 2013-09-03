@@ -5,7 +5,7 @@ if(empty($access)) {
 }
 ?>
 <div id="crew" class="content row">
-    <img id="main_background" class="background" src="images/tunnel.jpg" />
+    <img id="main_background" class="background" src="images/tunnel_l.jpg" />
     <div class="col-sm-3" style="height: 100%">
         <div id="crew-title"><div>CREW</div></div>
     </div>

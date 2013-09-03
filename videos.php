@@ -5,7 +5,7 @@ if(empty($access)) {
 }
 ?>
 <div id="videos" class="content">
-    <img id="main_background" class="background" src="images/tunnel.jpg" />
+    <img id="main_background" class="background" src="images/tunnel_l.jpg" />
     <div class="row" style="height:100%">
         <div class="col-sm-3" id="sidebar">
             <br><br><br>

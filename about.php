@@ -5,5 +5,5 @@ if(empty($access)) {
 }
 ?>
 <div id="about" class="content">
-    <img id="main_background" class="background" src="images/about.jpg" />
+    <img id="main_background" class="background" src="images/about_l.jpg" />
 </div>

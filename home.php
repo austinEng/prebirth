@@ -5,7 +5,7 @@
     }
 ?>
 <div id="home" class="content">
-    <img id="main_background" class="background" src="images/prebirthHome.jpg" />
+    <img id="main_background" class="background" src="images/prebirthHome_l.jpg" />
     <div id="title_floater"></div>
     <div id="title_wrapper">
         <a id="home_link_lg" href="#home">

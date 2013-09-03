@@ -50,9 +50,14 @@ if (isMobile()) {
             var width = parseInt(Math.random()*2+1);
             $('#gallery_packery').append('<div id="' + image_array[image] + '"class="item w' + width + '"><img class="gallery_thumb" src="' + image_array[image] + '" /></div>');
         }
-        /*$('#gallery_wrapper').append('<img id="gallery_pic" src="' + image_array[0] + '" />');
-        $('#gallery_wrapper_left').append('<img id="gallery_pic_left" src="' + '" />');
-        $('#gallery_wrapper_right').append('<img id="gallery_pic_right" src="' + image_array[1] + '" />');*/
+
+        var colWidth= parseInt($('.col-width').css('width'));
+        var rowHeight = parseInt($('.col-width').css('height'));
+        var mainContainer=$('#gallery_packery');
+        mainContainer.packery({
+            columnWidth: colWidth,
+            rowHeight: rowHeight
+        });
     </script>
 <script src="script/main.js" type="text/javascript"></script>
 </body>

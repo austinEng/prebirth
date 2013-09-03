@@ -95,3 +95,20 @@
 #crew > .col-sm-8 {
     padding-bottom: 150px;
 }
+#videos #sidebar {
+    display: none;
+}
+#viewer {
+    overflow: auto;
+    height:100%!important;
+}
+#viewer iframe {
+    display: block!important;
+    margin-bottom: 30px;
+}
+#viewer:last-child {
+    margin-bottom:150px;
+}
+#viewer-floater {
+    display: none;
+}

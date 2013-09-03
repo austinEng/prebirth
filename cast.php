@@ -5,11 +5,11 @@ if(empty($access)) {
 }
 ?>
 <div id="cast" class="content">
-    <img id="karissa_bg" class="cast-bg background bg-in" src="images/cast/jaclyn.jpg" />
-    <img id="matt_bg" class="cast-bg background" src="images/cast/matthias.jpg" />
-    <img id="alex_bg" class="cast-bg background" src="images/cast/saihttam.jpg" />
-    <img id="timmy_bg" class="cast-bg background" src="images/cast/darren.jpg" />
-    <img id="kristen_bg" class="cast-bg background" src="images/cast/heidi.jpg" />
+    <img id="karissa_bg" class="cast-bg background bg-in" src="images/cast/jaclyn_l.jpg" />
+    <img id="matt_bg" class="cast-bg background" src="images/cast/matthias_l.jpg" />
+    <img id="alex_bg" class="cast-bg background" src="images/cast/saihttam_l.jpg" />
+    <img id="timmy_bg" class="cast-bg background" src="images/cast/darren_l.jpg" />
+    <img id="kristen_bg" class="cast-bg background" src="images/cast/heidi_l.jpg" />
     <div class="row" style="height:100%">
         <div class="col-sm-3" id="sidebar">
             <div class="person_tag active-side" id="karissa">
