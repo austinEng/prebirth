@@ -302,9 +302,9 @@ function sizeBG(imgRatio, el) {
 }
 
 var canBeCalled = true;
-function sizeElements(){
+function limitedSizeElements(){
     if(!canBeCalled) return;
-    sizeElementsFunction();
+    sizeElements();
     canBeCalled = false;
     setTimeout(function(){
         canBeCalled = true;
@@ -315,7 +315,7 @@ function sizeElements(){
 /**
  * Resizes everything
  */
-function sizeElementsFunction() {
+function sizeElements() {
     var ratio=$(window).width()/$(window).height();
     var background=$('.content:visible .background');
     if (background.length > 1) {

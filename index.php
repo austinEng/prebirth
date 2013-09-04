@@ -62,7 +62,7 @@ if (isMobile()) {
 
 
 </head>
-<body onresize="sizeElements()" unselectable="on">
+<body onresize="limitedSizeElements()" unselectable="on">
     <div class="col-width"></div>
     <div id="loading_wrapper">
         <span>entering the spiritual realm...</span>
