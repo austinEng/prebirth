@@ -17,7 +17,7 @@ if(empty($access)) {
                     <div><img class="" src="http://upload.wikimedia.org/wikipedia/commons/e/ec/Happy_smiley_face.png"/></div>
                     <div class="panel-title">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            Billy Bob Joe Smith
+                            Josh Jackson
                         </a>
                     </div>
                 </div>
@@ -25,7 +25,15 @@ if(empty($access)) {
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-3"><img style="width:100%" src="http://upload.wikimedia.org/wikipedia/commons/e/ec/Happy_smiley_face.png"/></div>
-                            <div class="col-sm-9">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                            <div class="col-sm-9">
+                                <p>
+                                    Josh likes to sing. He sings so much that his life is practically a musical.  Originally, he had Prebirth planned out as a musical with hit songs such as "There Is A Demon In My Stomach" and "My Baby Is Dead."
+                                </p>
+                                <p>
+                                    Circa 2011.  Josh thought of a cool movie idea that he called his "untitled prebirth film." He spent a long time trying to think of a good title, but five minutes later he gave up and called it Prebirth.
+                                    When Josh was 17 years old, he decided not to go to college and since then, he's been writing novels, making movies, and creating awesome VFX and motion graphics in attempt to show that not everyone needs college. Deep inside, he is very scared and insecure about his future; he is planning to enroll next year.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,8 +51,12 @@ if(empty($access)) {
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-3"><img style="width:100%" src="http://upload.wikimedia.org/wikipedia/commons/e/ec/Happy_smiley_face.png"/></div>
-                            <div class="col-sm-9"> When he was in high school, Brian created the viral video, "Temple Run: The Movie Trailer." It was a huge success with over a million views. Unfortunately, it was attached to his youtube channel StopMotionClub, causing people to think he wanted to be the next Henry Selick when he actually wanted to be more like Robin Thicke.
-                                As a result of his viral video, he was offered several job opportunities including directing an official music video for international star MC Jin. He is now attending the School of Cinematic Arts at the University of Southern California, where he continues to excel in his gift of cinematography, directing, and editing.</div>
+                            <div class="col-sm-9">
+                                <p>
+                                    When he was in high school, Brian created the viral video, "Temple Run: The Movie Trailer." It was a huge success with over a million views. Unfortunately, it was attached to his youtube channel StopMotionClub, causing people to think he wanted to be the next Henry Selick when he actually wanted to be more like Robin Thicke.
+                                    As a result of his viral video, he was offered several job opportunities including directing an official music video for international star MC Jin. He is now attending the School of Cinematic Arts at the University of Southern California, where he continues to excel in his gift of cinematography, directing, and editing.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
