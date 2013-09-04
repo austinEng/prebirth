@@ -13,7 +13,7 @@ if(empty($access)) {
         <br><br><br>
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
-                <div class="panel-heading" style="margin-left:-60px">
+                <div class="panel-heading crew-pic-hidden">
                     <div><img class="" src="http://upload.wikimedia.org/wikipedia/commons/e/ec/Happy_smiley_face.png"/></div>
                     <div class="panel-title">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">

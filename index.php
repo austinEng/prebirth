@@ -14,6 +14,7 @@ return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|h
 }
 if (isMobile()) {
     //echo '<link rel="stylesheet" type="text/css" href="css/mobile.css" />';
+} else {
 }
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -22,7 +23,42 @@ if (isMobile()) {
 <script src="script/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
 <script src="script/packery.pkgd.min.js" type="text/javascript"></script>
 
+<script>
+    $(window).load(function() {
+        onLoad();
+        $('#loading_wrapper > span').delay(100).fadeOut(500);
+        $('#loading_wrapper').delay(400).fadeOut(1000, function(){
+            var mobile=<?php
+                if (isMobile()) {
+                    echo 'true';
+                } else {
+                    echo 'false';
+                }
+            ?>;
+            if (!(mobile)) {
+                $('.background').each(function() {
+                    var src = $(this).attr('src').slice(0,-5);
+                    $(this).attr('src',src+'m.jpg');
+                    /*$(this).load(function(){
+                     $(this).attr('src',src.slice(0,-1)+'.jpg');
+                     })*/
+                });
+            }
+
+            var videoContent = '<iframe class="visi" id="A5iP_0LOWvo_v" width="100%" src="//www.youtube.com/embed/A5iP_0LOWvo" frameborder="0" allowfullscreen></iframe> \
+            <iframe id="XY8cB9Cc1yg_v" width="100%" src="//www.youtube.com/embed/XY8cB9Cc1yg" frameborder="0" allowfullscreen></iframe> \
+            <iframe id="1UY_e5PlfS4_v" width="100%" src="//www.youtube.com/embed/1UY_e5PlfS4" frameborder="0" allowfullscreen></iframe> \
+            <iframe id="X3hoBCOb6C8_v" width="100%" src="//www.youtube.com/embed/X3hoBCOb6C8" frameborder="0" allowfullscreen></iframe> \
+            <iframe id="1U9zygLoBw4_v" width="100%" src="//www.youtube.com/embed/1U9zygLoBw4" frameborder="0" allowfullscreen></iframe> \
+            <iframe id="cEKiGw5EIqk_v" width="100%" src="//www.youtube.com/embed/cEKiGw5EIqk" frameborder="0" allowfullscreen></iframe>';
+            $('#viewer').html(videoContent);
+            sizeElements();
+        });
+    });
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
 
 
 </head>

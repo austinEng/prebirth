@@ -18,6 +18,7 @@
     -webkit-transition: height 0.5s ease;
     transition: height 0.5s ease;
     box-shadow: 0px 0px 60px 30px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 60px 30px rgba(0,0,0,1);
 }
 #navbar > ul > li > a {
     padding-top: 5px;
@@ -44,7 +45,15 @@
     width: 100%;
 }
 #title {
-    font-size: 60px;
+    font-size: 50px;
+    letter-spacing:15px
+}
+#subtitle {
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+#comingsoon {
+    font-size: 30px;
 }
 #sidebar > .person_tag {
     padding-top:5px!important;
@@ -53,8 +62,10 @@
     height: auto;
 }
 .actor {
-    bottom: 200px!important;
+    bottom: 300px!important;
     font-size: 12px!important;
+    top:0px;
+    overflow: auto;
 }
 
 #crew-title {
@@ -81,8 +92,21 @@
     height: auto!important;
     width: 100%;
 }
+.panel-title {
+    font-size: 18px;
+    top: 3px;
+}
+.panel-heading {
+    padding: 5px;
+}
+.crew-pic-hidden {
+    margin-left: -40px;
+}
 #crew {
     margin: 0;
+}
+.panel-heading > div > img {
+    height: 30px;
 }
 .panel-collapse > .panel-body > .row > .col-sm-9 {
     font-size: 12px;
@@ -95,20 +119,6 @@
 #crew > .col-sm-8 {
     padding-bottom: 150px;
 }
-#videos #sidebar {
-    display: none;
-}
-#viewer {
-    overflow: auto;
-    height:100%!important;
-}
-#viewer iframe {
-    display: block!important;
-    margin-bottom: 30px;
-}
-#viewer:last-child {
-    margin-bottom:150px;
-}
-#viewer-floater {
+#viewer, #viewer-floater {
     display: none;
 }
