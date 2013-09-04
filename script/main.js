@@ -224,23 +224,26 @@ $(document).ready(function() {
      * manages switching of pages
      */
     $("a.nav_link").click(function(event){
+        if ($('.nav-link-changing').length==0) {
+            $(event.target).addClass('nav-link-changing');
+            $('.nav_link').each(function(){
+                if (!($(this).hasClass('nav-link-changing'))) {
+                    $(this).addClass('nav-link-whiting');
+                }
+            });
 
-        $(event.target).addClass('nav-link-changing');
-        $('.nav_link').each(function(){
-            if (!($(this).hasClass('nav-link-changing'))) {
-                $(this).addClass('nav-link-whiting');
+            var keep_id=$(this).attr('id').slice(0,-5);
+            if (!(keep_id==window.location.hash.substring(1))) {
+                var win_id = window.location.hash.substring(1);
+                if (win_id=="") {win_id="home"}
+                var stateObj = {"state": win_id};
+                history.replaceState(stateObj, win_id);
+                switchPage(keep_id);
             }
-        });
-
-        var keep_id=$(this).attr('id').slice(0,-5);
-        if (!(keep_id==window.location.hash.substring(1))) {
-            var win_id = window.location.hash.substring(1);
-            if (win_id=="") {win_id="home"}
-            var stateObj = {"state": win_id};
-            history.replaceState(stateObj, win_id);
-            switchPage(keep_id);
+            $('#navbar').removeClass('navbar-up');
+        } else {
+            event.preventDefault();
         }
-        $('#navbar').removeClass('navbar-up');
     });
 
 });
@@ -298,10 +301,21 @@ function sizeBG(imgRatio, el) {
     }
 }
 
+var canBeCalled = true;
+function sizeElements(){
+    if(!canBeCalled) return;
+    sizeElementsFunction();
+    canBeCalled = false;
+    setTimeout(function(){
+        canBeCalled = true;
+    }, 80);
+}
+
+
 /**
  * Resizes everything
  */
-function sizeElements() {
+function sizeElementsFunction() {
     var ratio=$(window).width()/$(window).height();
     var background=$('.content:visible .background');
     if (background.length > 1) {
@@ -382,6 +396,14 @@ function switchPage(state) {
         $('#viewer iframe').height(vheight);
         $('#viewer').height(vheight);
         $('#viewer-floater').css('margin-bottom',vheight / -2 - 58 / 2);
+    }
+
+    if(newPage.attr('id')!='videos') {
+        $('#viewer iframe').each(function() {
+            var src = $(this).attr('src');
+            $(this).attr('src','');
+            $(this).attr('src',src);
+        });
     }
 
     var bg = newPage.children('.background');
