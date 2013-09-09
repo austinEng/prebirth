@@ -8,6 +8,7 @@ $access = true;
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
 <?php
 function isMobile() {
 return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
@@ -22,6 +23,7 @@ if (isMobile()) {
 <script src="script/bootstrap.min.js" type="text/javascript"></script>
 <script src="script/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
 <script src="script/packery.pkgd.min.js" type="text/javascript"></script>
+<script src="script/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <script>
     $(window).load(function() {

@@ -16,6 +16,8 @@ function onLoad() {
             $(this).show();
         }
     });
+    var bg = '#'+hash+' .background';
+    $(bg).attr('src',$(bg).attr('src').slice(0,-5)+'m.jpg');
 
     if(hash=="videos") {
         var videoContent = '<iframe class="visi" id="A5iP_0LOWvo_v" width="100%" src="//www.youtube.com/embed/A5iP_0LOWvo" frameborder="0" allowfullscreen></iframe> \

@@ -697,10 +697,6 @@ body {
     #viewer-floater {
       display: none;
     }*/
-  #viewer,
-  #viewer-floater {
-    display: none;
-  }
 }
 #scrollbar2 .viewport {
   position: fixed;
