@@ -7,8 +7,9 @@ $access = true;
 <title>Prebirth: The Eternal War</title>
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,400' rel='stylesheet' type='text/css'>
+<!--<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">-->
 <?php
 function isMobile() {
 return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
@@ -23,13 +24,11 @@ if (isMobile()) {
 <script src="script/bootstrap.min.js" type="text/javascript"></script>
 <script src="script/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
 <script src="script/packery.pkgd.min.js" type="text/javascript"></script>
-<script src="script/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--<script src="script/jquery.mCustomScrollbar.concat.min.js"></script>-->
 
 <script>
-    $(window).load(function() {
-        onLoad();
-        $('#loading_wrapper > span').delay(100).fadeOut(500);
-        $('#loading_wrapper').delay(400).fadeOut(1000, function(){
+    function fade_loader() {
+        $('#loading_wrapper').fadeOut(500, function(){
             var mobile=<?php
                 if (isMobile()) {
                     echo 'true';
@@ -46,15 +45,18 @@ if (isMobile()) {
                      })*/
                 });
             }
-
-            var videoContent = '<iframe class="visi" id="A5iP_0LOWvo_v" width="100%" src="//www.youtube.com/embed/A5iP_0LOWvo" frameborder="0" allowfullscreen></iframe> \
-            <iframe id="XY8cB9Cc1yg_v" width="100%" src="//www.youtube.com/embed/XY8cB9Cc1yg" frameborder="0" allowfullscreen></iframe> \
-            <iframe id="1UY_e5PlfS4_v" width="100%" src="//www.youtube.com/embed/1UY_e5PlfS4" frameborder="0" allowfullscreen></iframe> \
-            <iframe id="X3hoBCOb6C8_v" width="100%" src="//www.youtube.com/embed/X3hoBCOb6C8" frameborder="0" allowfullscreen></iframe> \
-            <iframe id="1U9zygLoBw4_v" width="100%" src="//www.youtube.com/embed/1U9zygLoBw4" frameborder="0" allowfullscreen></iframe> \
-            <iframe id="cEKiGw5EIqk_v" width="100%" src="//www.youtube.com/embed/cEKiGw5EIqk" frameborder="0" allowfullscreen></iframe>';
-            //$('#viewer').html(videoContent);
             sizeElements();
+        });
+        $('.gallery_thumb').each(function(){
+            $(this).attr('src',$(this).attr('data-orig'));
+        });
+    }
+
+    $(window).load(function() {
+        onLoad(function() {
+            $('#loading_text').delay(100).animate({opacity: 0}, 500, function(){
+                fade_loader();
+            });
         });
     });
 </script>
@@ -67,7 +69,7 @@ if (isMobile()) {
 <body onresize="limitedSizeElements()" unselectable="on">
     <div class="col-width"></div>
     <div id="loading_wrapper">
-        <span>entering the spiritual realm...</span>
+        <span id="loading_text">entering the spiritual realm...</span>
     </div>
     <?php
     include 'about.php';
@@ -80,24 +82,63 @@ if (isMobile()) {
     ?>
     <script>
         <?php
-            $imagesDir = 'images/gallery/thumb/';
+            $imagesDir = 'images/gallery/prod1/';
             $images = glob($imagesDir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 
             echo 'var image_array = ' . json_encode($images) . ";\n";
         ?>
         for (image in image_array) {
             var width = parseInt(Math.random()*2+1);
-            $('#gallery_packery').append('<div id="' + image_array[image] + '"class="item w' + width + '"><img class="gallery_thumb" src="' + image_array[image] + '" /></div>');
+            if (image_array[image].indexOf("_thumb") != -1 ){
+                $('#gallery_packery1').append('<div id="' + image_array[image] + '"class="item w' + width + '"><img class="gallery_thumb" src="" data-orig="' + image_array[image] + '" /></div>');
+            }
+        }
+        <?php
+            $imagesDir = 'images/gallery/prod2/';
+            $images = glob($imagesDir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+
+            echo 'var image_array = ' . json_encode($images) . ";\n";
+        ?>
+        for (image in image_array) {
+            var width = parseInt(Math.random()*2+1);
+            if (image_array[image].indexOf("_thumb") != -1 ){
+                $('#gallery_packery2').append('<div id="' + image_array[image] + '"class="item w' + width + '"><img class="gallery_thumb" src="' + image_array[image] + '" /></div>');
+            }
+        }
+        <?php
+            $imagesDir = 'images/gallery/prod3/';
+            $images = glob($imagesDir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+
+            echo 'var image_array = ' . json_encode($images) . ";\n";
+        ?>
+        for (image in image_array) {
+            var width = parseInt(Math.random()*2+1);
+            if (image_array[image].indexOf("_thumb") != -1 ){
+                $('#gallery_packery3').append('<div id="' + image_array[image] + '"class="item w' + width + '"><img class="gallery_thumb" src="' + image_array[image] + '" /></div>');
+            }
         }
 
         var colWidth= parseInt($('.col-width').css('width'));
         var rowHeight = parseInt($('.col-width').css('height'));
-        var mainContainer=$('#gallery_packery');
+        var mainContainer=$('#gallery_packery1');
         mainContainer.packery({
             columnWidth: colWidth,
-            rowHeight: rowHeight
+            rowHeight: rowHeight,
+            stamp: ".stamp"
+        });
+        mainContainer=$('#gallery_packery2');
+        mainContainer.packery({
+            columnWidth: colWidth,
+            rowHeight: rowHeight,
+            stamp: ".stamp"
+        });
+        mainContainer=$('#gallery_packery3');
+        mainContainer.packery({
+            columnWidth: colWidth,
+            rowHeight: rowHeight,
+            stamp: ".stamp"
         });
     </script>
-<script src="script/main.js" type="text/javascript"></script>
+<script src="script/main.min.js" type="text/javascript"></script>
 </body>
 </html>

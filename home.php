@@ -14,6 +14,6 @@
             <div id="subtitle">The Eternal War</div>
         </a>
         <br />
-        <div id="comingsoon">Coming Soon</div>
+        <div id="comingsoon"><span>Coming Soon</span></div>
     </div>
 </div>
