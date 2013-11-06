@@ -9,7 +9,6 @@ $access = true;
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,400' rel='stylesheet' type='text/css'>
-<!--<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">-->
 <?php
 function isMobile() {
 return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
@@ -19,52 +18,7 @@ if (isMobile()) {
 } else {
 }
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="script/bootstrap.min.js" type="text/javascript"></script>
-<script src="script/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
-<script src="script/packery.pkgd.min.js" type="text/javascript"></script>
-<!--<script src="script/jquery.mCustomScrollbar.concat.min.js"></script>-->
-
-<script>
-    function fade_loader() {
-        $('#loading_wrapper').fadeOut(500, function(){
-            var mobile=<?php
-                if (isMobile()) {
-                    echo 'true';
-                } else {
-                    echo 'false';
-                }
-            ?>;
-            if (!(mobile)) {
-                $('.background').each(function() {
-                    var src = $(this).attr('src').slice(0,-5);
-                    $(this).attr('src',src+'m.jpg');
-                    /*$(this).load(function(){
-                     $(this).attr('src',src.slice(0,-1)+'.jpg');
-                     })*/
-                });
-            }
-            sizeElements();
-        });
-        $('.gallery_thumb').each(function(){
-            $(this).attr('src',$(this).attr('data-orig'));
-        });
-    }
-
-    $(window).load(function() {
-        onLoad(function() {
-            $('#loading_text').delay(100).animate({opacity: 0}, 500, function(){
-                fade_loader();
-            });
-        });
-    });
-</script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-
-
 </head>
 <body onresize="limitedSizeElements()" unselectable="on">
     <div class="col-width"></div>
@@ -80,6 +34,11 @@ if (isMobile()) {
     include 'home.php';
     include 'navbar.php';
     ?>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="script/bootstrap.min.js" type="text/javascript"></script>
+    <script src="script/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+    <script src="script/packery.pkgd.min.js" type="text/javascript"></script>
     <script>
         <?php
             $imagesDir = 'images/gallery/prod1/';
@@ -139,6 +98,40 @@ if (isMobile()) {
             stamp: ".stamp"
         });
     </script>
-<script src="script/main.min.js" type="text/javascript"></script>
+    <script>
+        function fade_loader() {
+            $('#loading_wrapper').fadeOut(500, function(){
+                var mobile=<?php
+                if (isMobile()) {
+                    echo 'true';
+                } else {
+                    echo 'false';
+                }
+            ?>;
+                if (!(mobile)) {
+                    $('.background').each(function() {
+                        var src = $(this).attr('src').slice(0,-5);
+                        $(this).attr('src',src+'m.jpg');
+                        /*$(this).load(function(){
+                         $(this).attr('src',src.slice(0,-1)+'.jpg');
+                         })*/
+                    });
+                }
+                sizeElements();
+            });
+            $('.gallery_thumb').each(function(){
+                $(this).attr('src',$(this).attr('data-orig'));
+            });
+        }
+
+        $(window).load(function() {
+            onLoad(function() {
+                $('#loading_text').delay(100).animate({opacity: 0}, 500, function(){
+                    fade_loader();
+                });
+            });
+        });
+    </script>
+    <script src="script/main.min.js" type="text/javascript"></script>
 </body>
 </html>

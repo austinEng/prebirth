@@ -175,7 +175,6 @@ $(document).ready(function() {
         var offset = $(document.getElementById(link)).offset();
         var gal_wrap=$('#gallery_wrapper');
         var scroll = offset.top+gal_wrap.scrollTop();
-        console.log(offset.top,gal_wrap.scrollTop());
         gal_wrap.animate({
             scrollTop: scroll
         });
@@ -325,8 +324,37 @@ $(document).ready(function() {
             }
         }
     });
-
 });
+
+var scroll = 0;
+$('.stamp').each(function(){
+    var $this = $(this);
+    $.data(this, 'offset', {offset: $this.offset().top});
+});
+$('#gallery_wrapper').scroll(function(){
+    //var dir = scroll - $('#gallery_wrapper').scrollTop();
+    scroll = $('#gallery_wrapper').scrollTop();
+    $('.stamp').each(function(){
+        var orig = $.data(this, 'offset');
+        if (orig.offset / $(this).offset().top < 0 || $(this).offset().top==0) {
+            /*if (dir <= 0) {
+                $('.gal_tag').removeClass('active-side');
+                $('#'+$(this).children('span').attr('id')+'_link').addClass('active-side');
+            } else {
+                $('.gal_tag').removeClass('active-side');
+                $('#'+$(this).children('span').attr('id')+'_link').prev().addClass('active-side');
+                if ($(this).children('span').attr('id')=='production1') {
+                    $('#'+$(this).children('span').attr('id')+'_link').addClass('active-side');
+                }
+            }*/
+            $('.gal_tag').removeClass('active-side');
+            $('#'+$(this).children('span').attr('id')+'_link').addClass('active-side');
+        }
+        var $this = $(this);
+        $.data(this, 'offset', {offset: $this.offset().top});
+    });
+});
+
 
 $("#gallery_link").click(function(){
     $('.gallery_thumb').each(function(){

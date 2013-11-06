@@ -22,7 +22,7 @@ if(empty($access)) {
 
     <div class="row" style="height:100%">
         <div class="col-sm-3" id="sidebar">
-            <div class="gal_tag" id="production1_link">
+            <div class="gal_tag active-side" id="production1_link">
                 Production Day 1
             </div>
             <div class="gal_tag" id="production2_link">
