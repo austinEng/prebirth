@@ -5,7 +5,7 @@ if(empty($access)) {
 }
 ?>
 <div id="crew" class="content row">
-    <img id="main_background" class="background" src="images/tunnel_l.jpg" />
+    <img id="main_background" class="background" src="images/crewBG_l.jpg" />
     <div class="col-sm-3" style="height: 100%">
         <div id="crew-title"><div>CREW</div></div>
     </div>
@@ -195,7 +195,7 @@ if(empty($access)) {
                             <div class="col-sm-3"><img style="width:100%" src="images/crew/JustinTang.jpg"/></div>
                             <div class="col-sm-9">
                                 <p>
-                                    Justin Tang is a junior attending Freehold Township High School in an International Studies learning program.  As the younger cousin of both Brian Tang and Austin Eng, Justin's love for film stemmed from a mutual interest in Star Wars, as indicated by his massive Star Wars Lego collection.  He later got into stop-motion animation along with his cousins, producing several very amateur Lego stop-motion films himself.
+                                    Justin Tang is a student attending Freehold Township High School and is currently enrolled in an International Studies learning program.  As the younger cousin of both Brian Tang and Austin Eng, Justin's love for film stemmed from a mutual interest in Star Wars, as indicated by his massive Star Wars Lego collection.  He later got into stop-motion animation along with his cousins, producing several very amateur Lego stop-motion films himself.
                                 </p>
                                 <p>
                                     However, Justin decided to move onto bigger and better things and joined Brian Tang and Stopmotionclub in the creation of the viral video hit Temple Run the Movie Trailer.  Known as the "behind the scenes guy" and the "do-everything-else-that-needs-to-be-done guy," (which includes acting on the fly and holding up camera rigs and water bottles) Justin was always recording precious BTS footage just in case a blooper slipped and nobody was there to catch it, all while filling in any other role that was necessary.  He again joined Brian and Josh in the making of Prebirth: The Eternal War.
