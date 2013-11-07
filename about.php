@@ -43,7 +43,7 @@ if(empty($access)) {
                     </div>
                     <div>
                         <a href="http://twitter.com/prebirthmovie">twitter.com/prebirthmovie</a>
-                        <a href="http://facebook.com/prebirthmovie"><img src="ico/prebirthTW_icon.jpg" height="40px" width="40px"/></a>
+                        <a href="http://twitter.com/prebirthmovie"><img src="ico/prebirthTW_icon.jpg" height="40px" width="40px"/></a>
                     </div>
                 </div>
             </div>
