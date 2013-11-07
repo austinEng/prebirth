@@ -64,7 +64,7 @@ if(empty($access)) {
                                     To share this interest in high school, Brian founded the StopMotionClub in his freshman year. After a few months, the word "Club" was the only valid word in the name. Not many of the members shared the patience stop-motion animation required, so the club moved into the world of film and video.
                                 </p>
                                 <p>
-                                    Brian eventually expanded from being a school club into an independent film production group. He and a group of homeschoolers who share the same passion in filming and went on to make numerous short films varying in scope, size, length, messages, and visual effects. Not long after, Brian created the viral video "Temple Run the Movie trailer" which garnered over one million views. As a result, Brian received several job opportunities including directing an official music video for Asian rapper MC Jin. His Youtube journey eventually ended with Brian attending the School of Cinematic Arts at the University of Southern California, where he excels in his gift of cinematography, directing, and editing. Brian intends to continue making films wherever God grants him the opportunities.
+                                    Brian eventually expanded from being a school club into an independent film production group. He and a group of homeschoolers who share the same passion in filming went on to make numerous short films varying in scope, size, length, messages, and visual effects. Not long after, Brian created the viral video "Temple Run the Movie trailer" which garnered over one million views. As a result, Brian received several job opportunities including directing an official music video for Asian rapper MC Jin. His Youtube journey eventually ended with Brian attending the School of Cinematic Arts at the University of Southern California, where he excels in his gift of cinematography, directing, and editing. Brian intends to continue making films wherever God grants him the opportunities.
                                 </p>
                             </div>
                         </div>
@@ -114,7 +114,13 @@ if(empty($access)) {
                             <div class="col-sm-3"><img style="width:100%" src="images/crew/AustinEng.jpg"/></div>
                             <div class="col-sm-9">
                                 <p>
-                                    When he was eleven years old, Austin found out that he was adopted. His true parents were from planet Urk, in a galaxy several gazillion light years away, where everyone is ten times smarter than people on Earth. Since discovering his heritage, he used his incredible intelligence to create his own filmmaking rigs and equipment, code his own websites, and direct and shoot his own short films. He currently attends High Tech High, one of the top high schools in the nation.
+                                    Austin's passion for film and engineering began developing separately when he was still very young but later grew to augment each other. It started with the various stop motion animations and video projects he did with his cousin Brian. However, without a wealth of expensive camera equipment, it was difficult to make professional-looking films.
+                                </p>
+                                <p>
+                                    Austin began designing his own film equipment, allowing him to combine artistic creativity with engineering skill. Austin is a senior at pre-engineering academy High Technology High School, the #1 school in the nation for STEM education. When designing his equipment, he uses all the physics, math, and engineering he has learned to develop a concrete product. Some of these include dolly tracks, camera cranes, shoulder rigs, and camera stabilizers. His equipment have been invaluable resources in the film productions he has worked on. Austin also frequently works on set as a key grip to manage scene lighting and camera rigs. He can often be seen collaborating on technical issues on and off the set, setting up equipment, operating the boom mic, shooting behind the scenes, serving as an extra, or doing whatever else necessary to get the job done well.
+                                </p>
+                                <p>
+                                    On the side, Austin involves himself in everything he can. He has worked on the visual effects, tracking, and 3D animation in a few films, and aside from being the team's engineer, Austin serves to develop and maintain this website.
                                 </p>
                             </div>
                         </div>
